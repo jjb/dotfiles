@@ -1,0 +1,18 @@
+#
+# Bash History
+#
+shopt -s histappend
+export PROMPT_COMMAND="history -a"
+export HISTSIZE=5000
+export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTCONTROL=ignoreboth
+
+
+# shopt -s cdspell
+# shopt -u checkwinsize
+# shopt -s histreedit
+# shopt -s no_empty_cmd_completion
+
+
+# explanations of shopt options:
+#   http://ss64.com/bash/shopt.html

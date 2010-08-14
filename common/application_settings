@@ -1,0 +1,19 @@
+#
+# git
+#
+export GIT_EDITOR="/usr/bin/mate -wl1"
+export GIT_SSL_NO_VERIFY=true
+
+#
+# grep
+#
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
+#
+# other
+#
+export CVS_RSH=ssh
+export MANPAGER="/usr/bin/less -iRsX"
+export EDITOR="/usr/bin/mate -w"
+export GPGKEY='EAF2BDCB'

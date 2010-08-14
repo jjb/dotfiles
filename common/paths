@@ -1,0 +1,8 @@
+#
+# Path
+#
+export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
+export PATH=/usr/local/sbin:${PATH}
+# export PATH=/usr/local/bin:${PATH} # path_helper provides this
+export PATH=/usr/local/mysql/bin:${PATH}
+export PATH=~/bin:${PATH}

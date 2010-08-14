@@ -1,0 +1,86 @@
+autoload -U colors
+colors
+
+setopt prompt_subst
+
+#
+# Prompt
+#
+
+## with this prompt, the prompt character changes to a little git symbol
+## when inside a git repo, and the current git branch is displayed 
+## on the right. it's nice, but it ads a lot of delay, as it has to invoke
+## git each time. maybe there is a lower level solution out there, but
+## deactivating for now.
+# function prompt_char {
+#   origreturn=$?
+#   git branch >/dev/null 2>/dev/null && echo "$fg[green]±\e[0m" && return
+#   # hg root >/dev/null 2>/dev/null && echo '☿' && return
+# 
+#   if [[ $origreturn == "0" ]] ; then
+#     echo "➔"
+#   else
+#     echo "$fg[red]☹\e[0m"
+#   fi
+# }
+# 
+# PROMPT="%d 
+# \$(prompt_char) "
+# RPROMPT="\$(vcprompt)"
+
+PROMPT="➔ "
+
+
+#
+# Terminal Title
+#
+# http://www.gnegg.ch/2007/04/altering-the-terminal-title-bar-in-mac-os-x/
+case $TERM in
+  *xterm*|ansi)
+    # function settitle { print -Pn "\e]2;%n@%m: %~\a" } # this shows machine name and path even on remote connections! figure out how to only show this in that case
+    function settitle { print -Pn "\e]2; %~\a" }
+
+    function chpwd { settitle }
+    settitle
+    ;;
+esac
+
+
+#
+# Speling
+#
+setopt CORRECT
+setopt CORRECT_ALL
+
+# Quote pasted URLs
+autoload url-quote-magic
+zle -N self-insert url-quote-magic
+
+#
+# zsh History
+#
+setopt HIST_IGNORE_ALL_DUPS
+setopt APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=10000
+
+# 
+# Completion
+#
+autoload compinit
+compinit
+LISTMAX=0 # ask to complete if top of list would scroll off screen
+
+#
+# Other
+#
+REPORTTIME=10 # Show elapsed time if command took more than X seconds
+
+# Make CTRL-W delete after other chars, not just spaces
+WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
+
+bindkey -e
