@@ -1,1 +1,1 @@
-source ~/bin/dotfiles/zshrc
+source ~/.dotstore/zshrc

@@ -1,4 +1,4 @@
-. ~/bin/dotfiles/zsh/config
-. ~/bin/dotfiles/common/paths
-. ~/bin/dotfiles/common/aliases
-. ~/bin/dotfiles/common/application_settings
+. ~/.dotstore/zsh/config
+. ~/.dotstore/common/paths
+. ~/.dotstore/common/aliases
+. ~/.dotstore/common/application_settings

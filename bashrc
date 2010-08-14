@@ -1,4 +1,4 @@
-. ~/bin/dotfiles/bash/env
-. ~/bin/dotfiles/bash/config
-. ~/bin/dotfiles/common/paths
-. ~/bin/dotfiles/common/aliases
+. ~/.dotstore/bash/env
+. ~/.dotstore/bash/config
+. ~/.dotstore/common/paths
+. ~/.dotstore/common/aliases
