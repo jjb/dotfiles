@@ -8,6 +8,8 @@ alias mv="mv -i"
 alias ls="ls -Fh"
 
 alias wifi="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s"
+alias vless='vim -u `locate less.vim | head -n1`'
+alias spotlight='mdfind'
 
 source .bash_profile_local
 
