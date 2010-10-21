@@ -13,6 +13,9 @@ alias spotlight='mdfind'
 
 source .bash_profile_local
 
+# a function, not an alias. i should perhaps make a functions file...
+gem-info() { gem query -rad -n "^$@$" }
+
 #########################
 # aliases from peepcode #
 #########################
