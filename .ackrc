@@ -1,0 +1,4 @@
+--type-set=bin=.ai
+--nobin
+--type-add=ruby=.haml
+--type-add=ruby=.scss
