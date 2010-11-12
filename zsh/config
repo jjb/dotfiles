@@ -49,8 +49,8 @@ esac
 #
 # Speling
 #
-setopt CORRECT
-setopt CORRECT_ALL
+# setopt CORRECT
+# setopt CORRECT_ALL
 
 # Quote pasted URLs
 autoload url-quote-magic
