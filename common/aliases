@@ -1,6 +1,3 @@
-################################################
-# aliases from my configuration over the years #
-################################################
 alias cp="cp -i"
 alias rm="rm -i"
 alias mv="mv -i"
