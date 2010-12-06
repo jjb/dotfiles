@@ -12,7 +12,11 @@ alias wifi="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Curr
 alias vless='vim -u `locate less.vim | head -n1`'
 alias spotlight='mdfind'
 
-source .bash_profile_local
+if [ -f .bash_profile_local ]
+  then
+    source .bash_profile_local
+fi
+
 
 #########################
 # aliases from peepcode #
