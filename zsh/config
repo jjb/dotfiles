@@ -3,6 +3,9 @@ colors
 
 setopt prompt_subst
 
+# http://stackoverflow.com/questions/4405200/can-i-make-control-u-behavior-be-the-same-for-zsh-as-it-is-for-bash/4405239
+bindkey '^U' backward-kill-line
+
 #
 # Prompt
 #
