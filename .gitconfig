@@ -40,3 +40,5 @@
 [svn]
 	rmdir = true
 
+[branch]
+	autosetuprebase = always
