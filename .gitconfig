@@ -42,3 +42,4 @@
 
 [branch]
 	autosetuprebase = always
+	autosetupmerge = always
