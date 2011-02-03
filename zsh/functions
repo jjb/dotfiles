@@ -17,3 +17,19 @@ path() {
 
   echo $p
 }
+
+e() {
+  the_count=`locate $1 | wc -l`
+  the_count=${the_count// /}
+  if [[ $the_count == '0' ]]
+  then
+    echo "There is no such file with that name."
+  elif [[ $the_count != '1' ]]
+  then
+    echo "There are multiple files with that name."
+  else
+    the_file=`locate $1 | head -n1`
+    # $EDITOR $the_file
+    mate $the_file
+  fi
+}
