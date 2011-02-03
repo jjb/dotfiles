@@ -19,17 +19,27 @@ path() {
 }
 
 e() {
-  the_count=`locate $1 | wc -l`
-  the_count=${the_count// /}
-  if [[ $the_count == '0' ]]
+  candidates=`locate $1 | grep "$1\$" | xargs ls -1t`
+
+  char_count=`/bin/echo -n $candidates | wc -c`
+  char_count=${char_count// /}
+
+  line_count=`/bin/echo $candidates | wc -l`
+  line_count=${line_count// /}
+
+  if [[ $char_count == '0' ]]
   then
     echo "There is no such file with that name."
-  elif [[ $the_count != '1' ]]
+    return 1;
+  elif [[ $line_count != '1' ]]
   then
-    echo "There are multiple files with that name."
-  else
-    the_file=`locate $1 | head -n1`
-    # $EDITOR $the_file
-    mate $the_file
+    echo "There are multiple files with that name. Opening the most recently edited one."
   fi
+  
+  the_file=`echo $candidates | head -n1`
+
+  # $EDITOR $the_file
+  echo "mate $the_file...";
+  sleep 2;
+  mate $the_file
 }
