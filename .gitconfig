@@ -34,6 +34,7 @@
 	enabled = true
 [alias]
 	info = remote show origin
+  d = diff --patience --word-diff=color --ignore-space-change
 [gist]
 	private = yes
 	browse = yes
