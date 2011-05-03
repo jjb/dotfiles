@@ -5,6 +5,10 @@ require 'wirble'
 require 'ap'
 require 'irbcp'
 
+# http://drnicwilliams.com/2006/10/12/my-irbrc-for-consoleirb/
+require 'map_by_method'
+require 'what_methods'
+
 Wirble.init
 Wirble.colorize
 
