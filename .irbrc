@@ -36,6 +36,6 @@ end
 
 
 
-rescue
-  p "Something bad happened while loading .irbrc"
+rescue Exception => e
+  p ".irbrc did not load, for the following reason: #{e.message}"
 end
