@@ -3,6 +3,7 @@ begin
 require 'rubygems'
 require 'wirble'
 require 'ap'
+require 'irbcp'
 
 Wirble.init
 Wirble.colorize
