@@ -27,6 +27,7 @@ end
 # http://zargony.com/2008/04/28/five-tips-for-developing-rails-applications
 # require 'logger'
 # if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+#   Object.send(:remove_const, :RAILS_DEFAULT_LOGGER) 
 #   Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
 # end
 
