@@ -35,6 +35,8 @@
 [alias]
 	info = remote show origin
   d = diff --patience --word-diff=color --ignore-space-change
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 [gist]
 	private = yes
 	browse = yes
