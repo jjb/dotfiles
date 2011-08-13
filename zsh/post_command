@@ -6,7 +6,7 @@ note_ignore="yes"
 note_command="?"
 
 note_report(){
-  /usr/local/bin/growlnotify --appIcon 'Terminal' --sticky --message "$note_command is compelete."
+  /usr/local/bin/growlnotify --appIcon 'Terminal' --message "$note_command is compelete."
 }
 
 preexec(){
