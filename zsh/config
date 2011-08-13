@@ -72,6 +72,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# Exclude commands which include "production" from the history
+# http://stackoverflow.com/questions/6934565
+zshaddhistory() { [[ $1 != *production* ]] }
+
+
 # 
 # Completion
 #
