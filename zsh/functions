@@ -1,4 +1,3 @@
-# functions, not aliases. i should perhaps make a functions file...
 gem-info() { gem query --details --all --remote --name-matches "^$1$" }
 fix_permissions() {
   sudo chgrp -R $1 $2
