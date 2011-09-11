@@ -17,11 +17,6 @@ alias spotlight='mdfind'
 
 alias ip='curl --silent http://whatismyip.org | pbcopy && /bin/echo `pbpaste`'
 
-if [ -f .bash_profile_local ]
-  then
-    source .bash_profile_local
-fi
-
 
 #########################
 # aliases from peepcode #
