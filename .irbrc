@@ -12,9 +12,12 @@ require 'what_methods'
 Wirble.init
 Wirble.colorize
 
+require 'irb/completion'
 require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 2000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+IRB.conf[:USE_READLINE] = true
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 # IRB::Irb.class_eval do
 #   def output_value
@@ -36,8 +39,6 @@ end
 #   Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
 # end
 
-# require 'irb/completion'
-# ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 
 
