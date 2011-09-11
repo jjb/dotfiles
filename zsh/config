@@ -30,7 +30,7 @@ bindkey '^U' backward-kill-line
 # PROMPT="%d 
 # \$(prompt_char) "
 # vcprompt from https://github.com/xvzf/vcprompt
-RPROMPT="\$(vcprompt --format \"%b %{$fg[green]%}%m %{$fg[yellow]%}%u%{$reset_color%}\")"
+# RPROMPT="\$(vcprompt --format \"%b %{$fg[green]%}%m %{$fg[yellow]%}%u%{$reset_color%}\")"
 
 PROMPT="➔ "
 
