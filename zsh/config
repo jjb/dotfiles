@@ -32,7 +32,7 @@ bindkey '^U' backward-kill-line
 # vcprompt from https://github.com/xvzf/vcprompt
 # RPROMPT="\$(vcprompt --format \"%b %{$fg[green]%}%m %{$fg[yellow]%}%u%{$reset_color%}\")"
 
-PROMPT="➔ "
+export PROMPT=$BUNDLER_PROJECT_NAME"➔ "
 
 
 #
