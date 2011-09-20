@@ -1,23 +1,23 @@
 begin
   
 require 'rubygems'
-require 'wirble'
-require 'ap'
-require 'irbcp'
+# require 'wirble'
+# require 'ap'
+# require 'irbcp'
 
 # http://drnicwilliams.com/2006/10/12/my-irbrc-for-consoleirb/
-require 'map_by_method'
-require 'what_methods'
+# require 'map_by_method'
+# require 'what_methods'
 
-Wirble.init
-Wirble.colorize
+# Wirble.init
+# Wirble.colorize
 
 require 'irb/completion'
 require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 2000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:USE_READLINE] = true
-ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+# ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 # IRB::Irb.class_eval do
 #   def output_value
@@ -25,11 +25,11 @@ ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 #   end
 # end
 
-class Object
-  def m
-    (self.public_methods - Object.new.public_methods).sort
-  end
-end
+# class Object
+#   def m
+#     (self.public_methods - Object.new.public_methods).sort
+#   end
+# end
 
 # print logger to screen (to, for example, view per-command sql generated)
 # http://zargony.com/2008/04/28/five-tips-for-developing-rails-applications
