@@ -2,3 +2,4 @@
 --nobin
 --type-add=ruby=.haml
 --type-add=ruby=.scss
+--type-add=js=.coffee
