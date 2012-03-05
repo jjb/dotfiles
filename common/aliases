@@ -13,6 +13,7 @@ alias s="git status -sb"
 alias wifi="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s"
 alias vless='vim -u `locate less.vim | head -n1`'
 alias less='less -IM'
+alias ports="sudo lsof -Pi | grep LISTEN | sed -E 's/ +/,/g' | cut -d ',' -f 1,2,3,9 | column -s',' -t"
 alias spotlight='mdfind'
 
 alias ip='curl --silent http://whatismyip.org | pbcopy && /bin/echo `pbpaste`'
