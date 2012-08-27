@@ -1,7 +1,7 @@
 #
 # git
 #
-export GIT_EDITOR="mate -wl1"
+# export GIT_EDITOR="mate -wl1"
 export GIT_SSL_NO_VERIFY=true
 
 #
