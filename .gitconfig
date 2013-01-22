@@ -24,7 +24,7 @@
 	info = remote show origin
 	d = diff --patience --word-diff=color --ignore-space-change
 	l = log --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %C(green)(%cr)%Creset %C(bold blue)<%an>%Creset%n%s%n%n%b' --abbrev-commit --date=relative
-	recent = for-each-ref --count=5 --sort=-committerdate refs/heads/ --format='%(refname)'
+	recent = for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname)'
 
 [gist]
 	private = yes
