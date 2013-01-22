@@ -23,7 +23,7 @@
 [alias]
 	info = remote show origin
 	d = diff --patience --word-diff=color --ignore-space-change
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l = log --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %C(green)(%cr)%Creset %C(bold blue)<%an>%Creset%n%s%n%n%b' --abbrev-commit --date=relative
 	recent = for-each-ref --count=5 --sort=-committerdate refs/heads/ --format='%(refname)'
 
 [gist]
