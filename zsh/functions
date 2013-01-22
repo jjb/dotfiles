@@ -47,3 +47,11 @@ git-changes-since(){
   timestamp=`git show --format="%cD" $1 | head -n1`
   git log --patch --word-diff=color --reverse --since="$timestamp"
 }
+
+function alert {
+  if (( $? == 0 )) then
+    say -v trinoids 'successfully done'
+  else
+    say -v bad 'failed'
+  fi
+}
