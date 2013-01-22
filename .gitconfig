@@ -29,6 +29,8 @@
 [gist]
 	private = yes
 	browse = yes
+[push]
+ 	default = tracking
 [svn]
 	rmdir = true
 
