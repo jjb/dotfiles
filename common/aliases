@@ -19,6 +19,9 @@ alias spotlight='mdfind'
 
 alias ip='curl --silent http://whatismyip.org | pbcopy && /bin/echo `pbpaste`'
 
+alias ccat='pygmentize -O style=monokai -f console256 -g'
+
+
 
 #########################
 # aliases from peepcode #
