@@ -45,11 +45,12 @@ e() {
 
 git-changes-since(){
   timestamp=`git show --format="%cD" $1 | head -n1`
-  git log --patch --word-diff=color --reverse --since="$timestamp"
+  git log --patch --patience --ignore-all-space --reverse --since="$timestamp"
 }
 
 function alert {
   if (( $? == 0 )) then
+    unicornleap &
     say -v trinoids 'successfully done'
   else
     say -v bad 'failed'
