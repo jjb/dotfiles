@@ -63,6 +63,7 @@ zle -N self-insert url-quote-magic
 # zsh History
 #
 setopt HIST_IGNORE_ALL_DUPS
+setopt histignorespace
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_NO_STORE

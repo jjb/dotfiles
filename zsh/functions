@@ -1,4 +1,4 @@
-gem-info() { gem query --details --all --remote --name-matches "^$1$" }
+gem-info() { gem query --details --all --prerelease --remote --name-matches "^$1$" }
 fix_permissions() {
   sudo chgrp -R $1 $2
   sudo chmod -R g+r $2
@@ -50,7 +50,7 @@ git-changes-since(){
 
 function alert {
   if (( $? == 0 )) then
-    unicornleap &
+    unicornleap --seconds 3 > /dev/null &
     say -v trinoids 'successfully done'
   else
     say -v bad 'failed'

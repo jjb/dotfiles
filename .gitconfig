@@ -2,15 +2,17 @@
 	excludesfile = ~/.gitignore
 	pager = less -E -F -r
 [user]
-	name = John Joseph Bachir
+	name = John Bachir
 	email = j@jjb.cc
 [color]
 	branch = auto
 	diff = auto
 	status = auto
 	ui = true
+	interactive = auto
 [diff]
 	renamelimit = 50000
+	algorithm = patience
 [mergetool "kdiff3"]
 	path = /opt/local/bin/kdiff3
 [mergetool]
@@ -22,7 +24,7 @@
 	enabled = true
 [alias]
 	info = remote show origin
-	d = diff --patience --word-diff=color --ignore-space-change
+	d = diff --patience --word-diff=color --ignore-space-change --word-diff-regex=[[:alnum:]]+|[^[:space:]]
 	l = log --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %C(green)(%cr)%Creset %C(bold blue)<%an>%Creset%n%s%n%n%b' --abbrev-commit --date=relative
 	recent = for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname)'
 
@@ -30,10 +32,18 @@
 	private = yes
 	browse = yes
 [push]
- 	default = tracking
+	default = matching
 [svn]
 	rmdir = true
 
 [branch]
 	autosetuprebase = always
 	autosetupmerge = always
+[gitsh]
+	defaultCommand = status -sb
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[pull]
+	rebase = true
