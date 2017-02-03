@@ -51,8 +51,8 @@ git-changes-since(){
 function alert {
   if (( $? == 0 )) then
     unicornleap --seconds 3 > /dev/null &
-    say -v trinoids 'successfully done'
+    say -v Daniel 'successfully done!'
   else
-    say -v bad 'failed'
+    say -v Karen 'failed.'
   fi
 }
