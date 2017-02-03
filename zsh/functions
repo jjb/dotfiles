@@ -48,6 +48,9 @@ git-changes-since(){
   git log --patch --patience --ignore-all-space --reverse --since="$timestamp"
 }
 
+# examples:
+#   git push heroku master ; alert
+#   bundle install ; alert
 function alert {
   if (( $? == 0 )) then
     unicornleap --seconds 3 > /dev/null &
