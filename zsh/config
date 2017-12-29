@@ -41,9 +41,27 @@ export PROMPT=$BUNDLER_PROJECT_NAME"%{$fg[yellow]%}➔%{$reset_color%} "
 case $TERM in
   *xterm*|ansi)
     # would be nice to only show machine name when it's remote
-    function settitle { print -Pn "\e]2;[%m] %~\a" } 
+    function settitle {
+      MACHINE_NAME=`print -Pn "%m"`
+      if [ $MACHINE_NAME = "jjb" ]; then
+     print -Pn "\e]2;%~\a"
+      else
+     print -Pn "\e]2;[%m] %~\a"
+      fi
+    }
 
-    function chpwd { settitle }
+    autoload -U regexp-replace
+    function chpwd {
+      settitle
+      
+      # if [ -r $PWD/Gemfile ]; then
+      #   export PATH=./bin:${PATH//\.\/bin:}
+      # else
+      #   regexp-replace PATH '\./bin:' ''
+      # fi
+    }
+
+    # function chpwd { settitle }
     settitle
     ;;
 esac
