@@ -32,7 +32,7 @@
 	private = yes
 	browse = yes
 [push]
-	default = matching
+	default = current
 [svn]
 	rmdir = true
 
