@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore
-	pager = less -E -F -r
+	pager = most -wd
 [user]
 	name = John Bachir
 	email = j@jjb.cc
