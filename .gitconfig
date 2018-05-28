@@ -24,7 +24,7 @@
 	enabled = true
 [alias]
 	info = remote show origin
-	d = diff --patience --word-diff=color --ignore-space-change --word-diff-regex=[[:alnum:]]+|[^[:space:]]
+	d = diff --patience --word-diff=color --ignore-space-change --word-diff-regex=[[:alnum:]]+|[^[:space:]] --color-moved
 	l = log --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %C(green)(%cr)%Creset %C(bold blue)<%an>%Creset%n%s%n%n%b' --abbrev-commit --date=relative
 	recent = for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname)'
 
@@ -41,6 +41,7 @@
 	autosetupmerge = always
 [gitsh]
 	defaultCommand = status -sb
+	historySize = 10000
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
