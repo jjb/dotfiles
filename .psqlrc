@@ -12,4 +12,4 @@
 \set HISTFILE ~/.psql_history/ :HOST- :DBNAME
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
-\unset quiet
+\unset QUIET

@@ -14,5 +14,8 @@ export GREP_COLOR='1;32'
 #
 export CVS_RSH=ssh
 export MANPAGER="/usr/bin/less -iRsX"
-export EDITOR="mate -w"
+# export EDITOR="mate -w"
+# export EDITOR="code -n -w"
+export EDITOR="subl --new-window --wait"
 export GPGKEY='EAF2BDCB'
+export VAGRANT_HOME=~/vagrant-boxes

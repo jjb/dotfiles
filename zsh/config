@@ -43,7 +43,7 @@ case $TERM in
     # would be nice to only show machine name when it's remote
     function settitle {
       MACHINE_NAME=`print -Pn "%m"`
-      if [ $MACHINE_NAME = "jjb" ]; then
+      if [ $MACHINE_NAME = "Johns-Laptop" ]; then
      print -Pn "\e]2;%~\a"
       else
      print -Pn "\e]2;[%m] %~\a"
